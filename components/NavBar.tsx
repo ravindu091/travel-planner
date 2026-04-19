@@ -7,7 +7,7 @@ import { Session } from "next-auth";
 
 export default function NavBar({ session }: { session: Session | null }) {
   return (
-    <nav className="bg-white shadow-md py-4 px-8 border-b border-gray-200">
+    <nav className="bg-white shadow-md py-2 lg:py-3 px-8 border-b border-gray-200">
       <div className="container px-4 lg:px-8 mx-auto flex justify-between items-center">
         <Link href={"/"} className="flex items-center">
           <Image src={"/logo.png"} alt="logo" width={50} height={50}></Image>
@@ -33,7 +33,7 @@ export default function NavBar({ session }: { session: Session | null }) {
               </Link>
               <button
                 onClick={logOut}
-                className="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-2xl text-white"
+                className="py-2 px-3 bg-red-500 hover:bg-red-600 rounded-md text-white"
               >
                 Sign Out
               </button>
